@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+.goback {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+.img {
+  margin-bottom: 20px;
+}
+.movieTitle {
+  font-size: 30px;
+}
+.nav {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.nav > a {
+  padding: 8px 16px;
+  /* border: 1px solid rgb(183, 183, 183); */
+  border-radius: 4px;
+  background-color: #ededed;
+}
+a.active {
+  text-decoration: underline;
+}
+.descr {
+  margin-bottom: 20px;
+  width: 600px;
+}
+.label {
+  color: rgb(194, 194, 194);
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 0;
+}
