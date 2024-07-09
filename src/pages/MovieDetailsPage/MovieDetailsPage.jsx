@@ -1,5 +1,5 @@
 import s from "./MovieDetailsPage.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { getSingleMovie } from "../../../moviesAPI";
 import {
   Link,
@@ -28,16 +28,16 @@ export default function MovieDetailsPage() {
     })();
   }, [movieId]);
 
+  const goBackRef = useRef(location.state || "/");
+
   if (!data) return <p>Loading...</p>;
   const genres = data.genres;
   const imgUrl = "https://image.tmdb.org/t/p/w500/" + data.backdrop_path;
 
-  const back = location.state ?? "/";
-
   return (
     <div>
       <div className={s.container}>
-        <Link to={back} className={s.goback}>
+        <Link to={goBackRef.current} className={s.goback}>
           Go back
         </Link>
         <img src={imgUrl} alt="movie poster" className={s.img} />
